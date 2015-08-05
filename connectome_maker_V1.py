@@ -1,11 +1,19 @@
 #!/usr/bin/env python
-# The purpose of this script is to integrate a series of dipy functions into one coherent operations, to give 
-# you a structural connectome output for each subject.
-# Before you run this script, its important that you create a coregistered atlas (coregistered to your b0 scan)
-# Obviously, most of the code below is straight from dipy  
-subnums = [  'subject01' ] 
+
+'''
+ The purpose of this script is to integrate a series of dipy functions into one coherent operations, to give 
+ you a structural connectome output for each subject.
+ Before you run this script, its important that you create a coregistered atlas (coregistered to your b0 scan)
+ Obviously, most of the code (and commentary) below is straight from dipy, e.g. 
+ http://nipy.org/dipy/examples_built/streamline_tools.html
+
+ Also uses a helper script (condition_seeds.py) to resolve nonzero elements.
+'''
+
+subnums = [  'subject01' ] # subject list goes here.
 
 for subnum in subnums:
+
 	'''
 	Import all of the important libraries and initialize data files. Might be unnecessary given your setup.
 	'''
@@ -52,7 +60,7 @@ for subnum in subnums:
 	atlas = nib.load(atlas_file)
 	labels = atlas.get_data()
 
-	# masks the data, creates a mask
+	# mask the data, creates a mask '''
 	print '\tCreating Mask'
 	data_masked, mask = median_otsu(data, 2, 1)
 
