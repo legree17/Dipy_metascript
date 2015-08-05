@@ -2,8 +2,8 @@
 
 '''
  The purpose of this script is to integrate a series of dipy functions into one coherent operations, to give 
- you a structural connectome output for each subject.
- Before you run this script, its important that you create a coregistered atlas (coregistered to your b0 scan)
+ you a structural connectome output for each subject. Before you run this script, its important that you 
+ create a coregistered atlas (coregistered to your b0 scan); easily estimated using FLIRT.
  Obviously, most of the code (and commentary) below is straight from dipy, e.g. 
  http://nipy.org/dipy/examples_built/streamline_tools.html. See the original website for more complete
  commentary. 
@@ -57,7 +57,7 @@ for subnum in subnums:
 
 	# this line can be changed to reflect different atlasses; you just need to coregister atlas to native space.
 	atlas_dir = ('/imaging/subject_HOAs')
-	atlas_file = join(atlas_dir, (str(subnum) +'_hoa_thr_LR.nii.gz'))
+	atlas_file = join(atlas_dir, (str(subnum) +'_HOA116.nii.gz'))
 	atlas = nib.load(atlas_file)
 	labels = atlas.get_data()
 
