@@ -1,7 +1,7 @@
 # Copyright (c) 2014, Mayo Foundation For Medical Education and Research
 # All rights reserved.
 #
-# Written by Rob Reid.
+# Written by Rob Reid. 
 
 import numpy as np
     

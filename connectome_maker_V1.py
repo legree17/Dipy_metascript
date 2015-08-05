@@ -5,7 +5,8 @@
  you a structural connectome output for each subject.
  Before you run this script, its important that you create a coregistered atlas (coregistered to your b0 scan)
  Obviously, most of the code (and commentary) below is straight from dipy, e.g. 
- http://nipy.org/dipy/examples_built/streamline_tools.html
+ http://nipy.org/dipy/examples_built/streamline_tools.html. See the original website for more complete
+ commentary. 
 
  Also uses a helper script (condition_seeds.py) to resolve nonzero elements.
 '''
